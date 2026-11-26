@@ -1,33 +1,56 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
-	<meta charset="UFT-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>X - Inicio</title>
-	<link rel="stylesheet" href="css/layout.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>X - Inicio</title>
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/feed.css">
 </head>
 
 <body>
-	<header>
-		<h1>X</h1>
-	</header>
+        <header>
+                <h1>X</h1>
+        </header>
 
-	<main class="container">
+        <main class="container">
 
-		<aside class="left-column">
-			<h2>Menú</h2>
-		</aside>
+                <aside class="left-column">
+                        <h2>Menú</h2>
+                </aside>
 
-		<section class="center-column">
-			<h2>Inicio</h2>
-		</section>
+                <section class="center-column">
+                        <h2>Inicio</h2>
 
-		<aside class="rigth-column">
-			<h2>Información</h2>
-		</aside>
-	
-	</main>
+                        <div class="feed">
+                                <article class="post">
+                                        <p class="post-user">Mariana Reyes <span>@marianareyesl</span></p>
+                                        <p class="post-text">Hola, esta es la primera publicación del proyecto.</p>
+                                        <div class="post-actions">
+                                                <button type="button">Responder</button>
+                                                <button type="button">Repostear</button>
+                                                <button type="button">Me gusta</button>
+                                        </div>
+                                </article>
+
+                                <article class="post">
+                                        <p class="post-user">Diego Blanco <span>@diegoblancormz</span></p>
+                                        <p class="post-text">Probando la vista de publicaciones en el inicio.</p>
+                                        <div class="post-actions">
+                                                <button type="button">Responder</button>
+                                                <button type="button">Repostear</button>
+                                                <button type="button">Me gusta</button>
+                                        </div>
+                                </article>
+                        </div>
+                </section>
+
+                <aside class="rigth-column">
+                        <h2>Información</h2>
+                </aside>
+
+        </main>
 
 </body>
 </html>
