@@ -1,0 +1,39 @@
+﻿.composer {
+        padding-bottom: 15px;
+        border-bottom: 1px solid gray;
+}
+
+.composer textarea {
+        width: 100%;
+        height: 80px;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+        border: 1px solid gray;
+        margin-bottom: 10px;
+        resize: none;
+}
+
+.composer-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.composer-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+}
+
+.char-count {
+        font-size: 14px;
+        color: gray;
+}
+
+.composer button {
+        padding: 8px 15px;
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+}

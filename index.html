@@ -1,33 +1,45 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
-	<meta charset="UFT-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>X - Inicio</title>
-	<link rel="stylesheet" href="css/layout.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>X - Inicio</title>
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/composer.css">
 </head>
 
 <body>
-	<header>
-		<h1>X</h1>
-	</header>
+        <header>
+                <h1>X</h1>
+        </header>
 
-	<main class="container">
+        <main class="container">
 
-		<aside class="left-column">
-			<h2>Menú</h2>
-		</aside>
+                <aside class="left-column">
+                        <h2>Menú</h2>
+                </aside>
 
-		<section class="center-column">
-			<h2>Inicio</h2>
-		</section>
+                <section class="center-column">
+                        <h2>Inicio</h2>
 
-		<aside class="rigth-column">
-			<h2>Información</h2>
-		</aside>
-	
-	</main>
+                        <form class="composer">
+                                <textarea maxlength="280" placeholder="¿Qué está pasando?"></textarea>
+                                <div class="composer-footer">
+                                        <input type="file" accept="image/*">
+                                        <div class="composer-controls">
+                                                <span class="char-count">0 / 280</span>
+                                                <button type="submit">Publicar</button>
+                                        </div>
+                                </div>
+                        </form>
+                </section>
+
+                <aside class="rigth-column">
+                        <h2>Información</h2>
+                </aside>
+
+        </main>
 
 </body>
 </html>
