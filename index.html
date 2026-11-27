@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X - Inicio</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/session.css">
+    <link rel="stylesheet" href="css/composer.css">
+    <link rel="stylesheet" href="css/feed.css">
+    <link rel="stylesheet" href="css/filters.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>X</h1>
+    </header>
+
+    <main class="container">
+
+        <aside class="left-column">
+            <aside class="sidebar">
+                <h1>X</h1>
+
+                <nav>
+                    <a href="#">Inicio</a>
+                    <a href="#">Explorar</a>
+                    <a href="#">Notificaciones</a>
+                    <a href="#">Mensajes</a>
+                    <a href="#">Guardados</a>
+                    <a href="#">Perfil</a>
+                    <a href="#">Configuración</a>
+                </nav>
+
+                <button type="button">Publicar</button>
+            </aside>
+        </aside>
+
+        <section class="center-column">
+
+            <section class="session-container">
+                <section class="session-box">
+                    <h2>Sesión activa</h2>
+
+                    <div class="user-info">
+                        <h3>Usuario conectado</h3>
+                        <p>Nombre: Usuario X</p>
+                        <p>Correo: usuario@ejemplo.com</p>
+                        <p>Estado: Activo</p>
+                    </div>
+
+                    <a href="#" class="logout-button">Cerrar sesión</a>
+                </section>
+            </section>
+
+            <h2>Inicio</h2>
+
+            <div class="filters">
+                <button type="button" class="filter-tab active">Para ti</button>
+                <button type="button" class="filter-tab">Siguiendo</button>
+            </div>
+
+            <form class="composer">
+                <textarea maxlength="280" placeholder="¿Qué está pasando?"></textarea>
+
+                <div class="composer-footer">
+                    <input type="file" accept="image/*">
+
+                    <div class="composer-controls">
+                        <span class="char-count">0 / 280</span>
+                        <button type="submit">Publicar</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="feed">
+
+                <article class="post">
+                    <p class="post-user">Mariana Reyes <span>@marianareyesl</span></p>
+                    <p class="post-text">Hola, esta es la primera publicación del proyecto.</p>
+
+                    <div class="post-actions">
+                        <button type="button">Responder</button>
+                        <button type="button">Repostear</button>
+                        <button type="button">Me gusta</button>
+                    </div>
+                </article>
+
+                <article class="post">
+                    <p class="post-user">Diego Blanco <span>@diegoblancormz</span></p>
+                    <p class="post-text">Probando la vista de publicaciones en el inicio.</p>
+
+                    <div class="post-actions">
+                        <button type="button">Responder</button>
+                        <button type="button">Repostear</button>
+                        <button type="button">Me gusta</button>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <aside class="rigth-column">
+            <h2>Información</h2>
+        </aside>
+
+    </main>
+
+</body>
+</html>
+
+
+
