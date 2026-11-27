@@ -1,0 +1,32 @@
+﻿.feed {
+        margin-top: 15px;
+        border-top: 1px solid gray;
+}
+
+.post {
+        padding: 15px 0;
+        border-bottom: 1px solid gray;
+}
+
+.post-user {
+        font-weight: bold;
+        margin-bottom: 5px;
+}
+
+.post-user span {
+        font-weight: normal;
+        color: gray;
+        font-size: 14px;
+}
+
+.post-text {
+        margin-bottom: 10px;
+}
+
+.post-actions button {
+        padding: 5px 10px;
+        margin-right: 5px;
+        background-color: white;
+        border: 1px solid gray;
+        cursor: pointer;
+}
