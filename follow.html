@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow - X</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .contenedor {
+            max-width: 600px;
+            margin: auto;
+            background-color: #111;
+            border: 1px solid #333;
+        }
+
+        .encabezado {
+            padding: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            border-bottom: 1px solid #333;
+        }
+
+        .usuario {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .foto {
+            width: 60px;
+            height: 60px;
+            background-color: #333;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .informacion {
+            flex-grow: 1;
+        }
+
+        .nombre {
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .arroba {
+            color: #aaa;
+            margin-top: 5px;
+        }
+
+        .descripcion {
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        .boton {
+            padding: 10px 18px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .boton:hover {
+            background-color: #ddd;
+        }
+
+        .titulo {
+            padding: 15px 20px;
+            font-weight: bold;
+            border-bottom: 1px solid #333;
+        }
+
+        .datos {
+            color: #aaa;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <div class="encabezado">
+            ← Seguir usuarios
+        </div>
+
+        <div class="titulo">
+            Personas que quizá conozcas
+        </div>
+
+        <div class="usuario">
+            <div class="foto"></div>
+
+            <div class="informacion">
+                <div class="nombre">Ing. Mendoza ✓</div>
+                <div class="arroba">@ing_dev</div>
+                <div class="descripcion">
+                    Ingeniero de Software · Desarrollo web y tecnología.
+                </div>
+                <div class="datos">
+                    256 siguiendo · 165 seguidores
+                </div>
+            </div>
+
+            <button class="boton" onclick="seguir(this)">Seguir</button>
+        </div>
+
+        <div class="usuario">
+            <div class="foto"></div>
+
+            <div class="informacion">
+                <div class="nombre">Ana Torres</div>
+                <div class="arroba">@ana_programa</div>
+                <div class="descripcion">
+                    Desarrolladora frontend | HTML, CSS y JavaScript.
+                </div>
+                <div class="datos">
+                    430 siguiendo · 280 seguidores
+                </div>
+            </div>
+
+            <button class="boton" onclick="seguir(this)">Seguir</button>
+        </div>
+
+        <div class="usuario">
+            <div class="foto"></div>
+
+            <div class="informacion">
+                <div class="nombre">Carlos Ruiz</div>
+                <div class="arroba">@carlos_code</div>
+                <div class="descripcion">
+                    Software engineer | Construyendo proyectos digitales.
+                </div>
+                <div class="datos">
+                    180 siguiendo · 95 seguidores
+                </div>
+            </div>
+
+            <button class="boton" onclick="seguir(this)">Seguir</button>
+        </div>
+
+    </div>
+
+    <script>
+        function seguir(boton) {
+            if (boton.textContent === "Seguir") {
+                boton.textContent = "Siguiendo";
+                boton.style.backgroundColor = "black";
+                boton.style.color = "white";
+                boton.style.border = "1px solid white";
+            } else {
+                boton.textContent = "Seguir";
+                boton.style.backgroundColor = "white";
+                boton.style.color = "black";
+                boton.style.border = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
