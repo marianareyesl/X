@@ -1,35 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-	<meta charset="UFT-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>X - Sesión activa</title>
-	<link rel="stylesheet" href="css/session.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X - Sesión activa</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/session.css">
 </head>
 
 <body>
 
-	<main class="session-container">
-		<section class="session-box">
-			<h1>X</h1>
-			<h2>Sesión activa</h2>
-			<div class="user-info">
-				<h3>Usuario conectado</h3>
+    <header>
+        <h1>X</h1>
+    </header>
 
-				<p>Nombre: Usuario X</p>
+    <main class="container">
 
-				<p>Correo: usuario@ejemplo.com</p>
+        <aside class="left-column">
+            <aside class="sidebar">
 
-				<p>Estado: Activo</p>
+                <h1>X</h1>
 
-			</div>
+                <nav>
+                    <a href="#">Inicio</a>
+                    <a href="#">Explorar</a>
+                    <a href="#">Notificaciones</a>
+                    <a href="#">Mensajes</a>
+                    <a href="#">Guardados</a>
+                    <a href="#">Perfil</a>
+                    <a href="#">Configuración</a>
+                </nav>
 
-			<a href="#" class="logout-button">Cerrar sesión</a>
+                <button type="button">Publicar</button>
 
-		</section>
+            </aside>
+        </aside>
 
-	</main>
+        <section class="center-column">
+
+            <main class="session-container">
+                <section class="session-box">
+
+                    <h2>Sesión activa</h2>
+
+                    <div class="user-info">
+                        <h3>Usuario conectado</h3>
+
+                        <p>Nombre: Usuario X</p>
+                        <p>Correo: usuario@ejemplo.com</p>
+                        <p>Estado: Activo</p>
+                    </div>
+
+                    <a href="#" class="logout-button">Cerrar sesión</a>
+
+                </section>
+            </main>
+
+        </section>
+
+        <aside class="rigth-column">
+            <h2>Información</h2>
+        </aside>
+
+    </main>
+
 </body>
 </html>
 
