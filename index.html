@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -5,12 +6,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X - Inicio</title>
+
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/session.css">
     <link rel="stylesheet" href="css/composer.css">
     <link rel="stylesheet" href="css/feed.css">
     <link rel="stylesheet" href="css/filters.css">
+
+    <style>
+        /* Navegación y botones */
+
+        .sidebar nav a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .sidebar nav a:hover {
+            background-color: #eeeeee;
+        }
+
+        .sidebar button,
+        .post-actions button,
+        .composer button {
+            cursor: pointer;
+        }
+
+        /* Ir al formulario de publicación */
+
+        .publish-link {
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Pestañas Para ti y Siguiendo */
+
+        .filters input {
+            display: none;
+        }
+
+        .filters label {
+            display: inline-block;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+
+        #para-ti:checked ~ .filter-labels label[for="para-ti"],
+        #siguiendo:checked ~ .filter-labels label[for="siguiendo"] {
+            border-bottom: 2px solid black;
+            font-weight: bold;
+        }
+
+        .following-post {
+            display: none;
+        }
+
+        #siguiendo:checked ~ .feed .post {
+            display: none;
+        }
+
+        #siguiendo:checked ~ .feed .following-post {
+            display: block;
+        }
+
+        /* Formulario de respuesta */
+
+        .reply-form {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .reply-form:target {
+            display: block;
+        }
+
+        /* Me gusta visual */
+
+        .like-checkbox {
+            display: none;
+        }
+
+        .like-label {
+            cursor: pointer;
+        }
+
+        .like-checkbox:checked + .like-label {
+            font-weight: bold;
+        }
+
+        /* Desplazamiento */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -22,90 +116,227 @@
     <main class="container">
 
         <aside class="left-column">
+
             <aside class="sidebar">
+
                 <h1>X</h1>
 
                 <nav>
                     <a href="index.html">Inicio</a>
                     <a href="trends.html">Explorar</a>
-                    <a href="#">Notificaciones</a>
-                    <a href="#">Mensajes</a>
+                    <a href="notifications.html">Notificaciones</a>
+                    <a href="messages.html">Mensajes</a>
                     <a href="bookmarks.html">Guardados</a>
                     <a href="perfil.html">Perfil</a>
                     <a href="settings.html">Configuración</a>
                 </nav>
 
-                <button type="button">Publicar</button>
+                <a href="#publicar" class="publish-link">
+                    Publicar
+                </a>
+
             </aside>
+
         </aside>
 
         <section class="center-column">
 
             <section class="session-container">
+
                 <section class="session-box">
+
                     <h2>Sesión activa</h2>
 
                     <div class="user-info">
+
                         <h3>Usuario conectado</h3>
+
                         <p>Nombre: Usuario X</p>
                         <p>Correo: usuario@ejemplo.com</p>
                         <p>Estado: Activo</p>
+
                     </div>
 
-                    <a href="#" class="logout-button">Cerrar sesión</a>
+                    <a href="login.html" class="logout-button">
+                        Cerrar sesión
+                    </a>
+
                 </section>
+
             </section>
 
             <h2>Inicio</h2>
 
-            <div class="filters">
-                <button type="button" class="filter-tab active">Para ti</button>
-                <button type="button" class="filter-tab">Siguiendo</button>
-            </div>
+            <!-- PESTAÑAS -->
 
-            <form class="composer">
-                <textarea maxlength="280" placeholder="¿Qué está pasando?"></textarea>
+            <section class="filters">
 
-                <div class="composer-footer">
-                    <input type="file" accept="image/*">
+                <input type="radio" name="filter"
+                    id="para-ti" checked>
 
-                    <div class="composer-controls">
-                        <span class="char-count">0 / 280</span>
-                        <button type="submit">Publicar</button>
-                    </div>
+                <input type="radio" name="filter"
+                    id="siguiendo">
+
+                <div class="filter-labels">
+
+                    <label for="para-ti">
+                        Para ti
+                    </label>
+
+                    <label for="siguiendo">
+                        Siguiendo
+                    </label>
+
                 </div>
-            </form>
 
-            <div class="feed">
+                <!-- FORMULARIO -->
 
-                <article class="post">
-                    <p class="post-user">Mariana Reyes <span>@marianareyesl</span></p>
-                    <p class="post-text">Hola, esta es la primera publicación del proyecto.</p>
+                <form class="composer" id="publicar">
 
-                    <div class="post-actions">
-                        <button type="button">Responder</button>
-                        <button type="button">Repostear</button>
-                        <button type="button">Me gusta</button>
+                    <textarea maxlength="280"
+                        placeholder="¿Qué está pasando?"></textarea>
+
+                    <div class="composer-footer">
+
+                        <input type="file" accept="image/*">
+
+                        <div class="composer-controls">
+
+                            <span class="char-count">
+                                Máximo 280 caracteres
+                            </span>
+
+                            <button type="submit">
+                                Publicar
+                            </button>
+
+                        </div>
+
                     </div>
-                </article>
 
-                <article class="post">
-                    <p class="post-user">Diego Blanco <span>@diegoblancormz</span></p>
-                    <p class="post-text">Probando la vista de publicaciones en el inicio.</p>
+                </form>
 
-                    <div class="post-actions">
-                        <button type="button">Responder</button>
-                        <button type="button">Repostear</button>
-                        <button type="button">Me gusta</button>
-                    </div>
-                </article>
+                <!-- PUBLICACIONES -->
 
-            </div>
+                <div class="feed">
+
+                    <article class="post">
+
+                        <p class="post-user">
+                            Mariana Reyes
+                            <span>@marianareyesl</span>
+                        </p>
+
+                        <p class="post-text">
+                            Hola, esta es la primera publicación del proyecto.
+                        </p>
+
+                        <div class="post-actions">
+
+                            <a href="#respuesta-mariana">
+                                Responder
+                            </a>
+
+                            <a href="reposts.html">
+                                Repostear
+                            </a>
+
+                            <input type="checkbox"
+                                id="like-mariana"
+                                class="like-checkbox">
+
+                            <label for="like-mariana"
+                                class="like-label">
+                                Me gusta
+                            </label>
+
+                        </div>
+
+                        <form id="respuesta-mariana"
+                            class="reply-form">
+
+                            <textarea
+                                placeholder="Escribe una respuesta">
+                            </textarea>
+
+                            <button type="submit">
+                                Enviar respuesta
+                            </button>
+
+                        </form>
+
+                    </article>
+
+                    <article class="post">
+
+                        <p class="post-user">
+                            Diego Blanco
+                            <span>@diegoblancormz</span>
+                        </p>
+
+                        <p class="post-text">
+                            Probando la vista de publicaciones en el inicio.
+                        </p>
+
+                        <div class="post-actions">
+
+                            <a href="#respuesta-diego">
+                                Responder
+                            </a>
+
+                            <a href="reposts.html">
+                                Repostear
+                            </a>
+
+                            <input type="checkbox"
+                                id="like-diego"
+                                class="like-checkbox">
+
+                            <label for="like-diego"
+                                class="like-label">
+                                Me gusta
+                            </label>
+
+                        </div>
+
+                        <form id="respuesta-diego"
+                            class="reply-form">
+
+                            <textarea
+                                placeholder="Escribe una respuesta">
+                            </textarea>
+
+                            <button type="submit">
+                                Enviar respuesta
+                            </button>
+
+                        </form>
+
+                    </article>
+
+                    <article class="post following-post">
+
+                        <p class="post-user">
+                            Diego Blanco
+                            <span>@diegoblancormz</span>
+                        </p>
+
+                        <p class="post-text">
+                            Publicación de una cuenta que sigues.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
 
         </section>
 
         <aside class="rigth-column">
+
             <h2>Información</h2>
+
         </aside>
 
     </main>
