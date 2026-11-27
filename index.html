@@ -15,25 +15,25 @@
     <link rel="stylesheet" href="css/filters.css">
 
     <style>
-        /* Navegación y botones */
+
+        /* DESPLAZAMIENTO */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* MENÚ LATERAL */
 
         .sidebar nav a {
             display: block;
             padding: 10px;
             text-decoration: none;
+            color: inherit;
         }
 
         .sidebar nav a:hover {
             background-color: #eeeeee;
         }
-
-        .sidebar button,
-        .post-actions button,
-        .composer button {
-            cursor: pointer;
-        }
-
-        /* Ir al formulario de publicación */
 
         .publish-link {
             display: inline-block;
@@ -42,24 +42,34 @@
             color: inherit;
         }
 
-        /* Pestañas Para ti y Siguiendo */
+        /* PESTAÑAS */
 
-        .filters input {
-            display: none;
+        .filters input[type="radio"] {
+            position: absolute;
+            opacity: 0;
         }
 
-        .filters label {
-            display: inline-block;
-            padding: 12px 20px;
+        .filter-labels {
+            display: flex;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        .filter-labels label {
+            flex: 1;
+            display: block;
+            padding: 15px;
+            text-align: center;
             cursor: pointer;
-            border-bottom: 2px solid transparent;
+            border-bottom: 3px solid transparent;
         }
 
         #para-ti:checked ~ .filter-labels label[for="para-ti"],
         #siguiendo:checked ~ .filter-labels label[for="siguiendo"] {
-            border-bottom: 2px solid black;
+            border-bottom: 3px solid black;
             font-weight: bold;
         }
+
+        /* PUBLICACIONES */
 
         .following-post {
             display: none;
@@ -73,7 +83,25 @@
             display: block;
         }
 
-        /* Formulario de respuesta */
+        /* BOTONES ME GUSTA */
+
+        .like-checkbox {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .like-label {
+            display: inline-block;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .like-checkbox:checked + .like-label {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* RESPUESTAS */
 
         .reply-form {
             display: none;
@@ -84,27 +112,42 @@
             display: block;
         }
 
-        /* Me gusta visual */
-
-        .like-checkbox {
-            display: none;
+        .reply-form textarea {
+            display: block;
+            width: 100%;
+            min-height: 60px;
+            margin-bottom: 8px;
         }
 
-        .like-label {
+        /* FORMULARIOS */
+
+        .composer textarea {
+            width: 100%;
+            min-height: 80px;
+            box-sizing: border-box;
+        }
+
+        .composer button,
+        .reply-form button {
             cursor: pointer;
         }
 
-        .like-checkbox:checked + .like-label {
-            font-weight: bold;
+        /* ACCIONES */
+
+        .post-actions a {
+            display: inline-block;
+            padding: 5px;
+            text-decoration: none;
+            color: inherit;
         }
 
-        /* Desplazamiento */
-
-        html {
-            scroll-behavior: smooth;
+        .post-actions a:hover,
+        .post-actions label:hover {
+            text-decoration: underline;
         }
 
     </style>
+
 </head>
 
 <body>
@@ -114,6 +157,8 @@
     </header>
 
     <main class="container">
+
+        <!-- MENÚ LATERAL -->
 
         <aside class="left-column">
 
@@ -139,7 +184,11 @@
 
         </aside>
 
+        <!-- CONTENIDO CENTRAL -->
+
         <section class="center-column">
+
+            <!-- SESIÓN -->
 
             <section class="session-container">
 
@@ -171,11 +220,14 @@
 
             <section class="filters">
 
-                <input type="radio" name="filter"
-                    id="para-ti" checked>
+                <input type="radio"
+                       name="filter"
+                       id="para-ti"
+                       checked>
 
-                <input type="radio" name="filter"
-                    id="siguiendo">
+                <input type="radio"
+                       name="filter"
+                       id="siguiendo">
 
                 <div class="filter-labels">
 
@@ -189,16 +241,23 @@
 
                 </div>
 
-                <!-- FORMULARIO -->
+                <!-- FORMULARIO DE PUBLICACIÓN -->
 
-                <form class="composer" id="publicar">
+                <form class="composer"
+                      id="publicar"
+                      action="#publicar"
+                      method="get">
 
-                    <textarea maxlength="280"
-                        placeholder="¿Qué está pasando?"></textarea>
+                    <textarea
+                        name="publicacion"
+                        maxlength="280"
+                        placeholder="¿Qué está pasando?">
+                    </textarea>
 
                     <div class="composer-footer">
 
-                        <input type="file" accept="image/*">
+                        <input type="file"
+                               accept="image/*">
 
                         <div class="composer-controls">
 
@@ -219,6 +278,8 @@
                 <!-- PUBLICACIONES -->
 
                 <div class="feed">
+
+                    <!-- PUBLICACIÓN 1 -->
 
                     <article class="post">
 
@@ -242,20 +303,23 @@
                             </a>
 
                             <input type="checkbox"
-                                id="like-mariana"
-                                class="like-checkbox">
+                                   id="like-mariana"
+                                   class="like-checkbox">
 
                             <label for="like-mariana"
-                                class="like-label">
+                                   class="like-label">
                                 Me gusta
                             </label>
 
                         </div>
 
                         <form id="respuesta-mariana"
-                            class="reply-form">
+                              class="reply-form"
+                              action="#respuesta-mariana"
+                              method="get">
 
                             <textarea
+                                name="respuesta"
                                 placeholder="Escribe una respuesta">
                             </textarea>
 
@@ -266,6 +330,8 @@
                         </form>
 
                     </article>
+
+                    <!-- PUBLICACIÓN 2 -->
 
                     <article class="post">
 
@@ -289,20 +355,23 @@
                             </a>
 
                             <input type="checkbox"
-                                id="like-diego"
-                                class="like-checkbox">
+                                   id="like-diego"
+                                   class="like-checkbox">
 
                             <label for="like-diego"
-                                class="like-label">
+                                   class="like-label">
                                 Me gusta
                             </label>
 
                         </div>
 
                         <form id="respuesta-diego"
-                            class="reply-form">
+                              class="reply-form"
+                              action="#respuesta-diego"
+                              method="get">
 
                             <textarea
+                                name="respuesta"
                                 placeholder="Escribe una respuesta">
                             </textarea>
 
@@ -313,6 +382,8 @@
                         </form>
 
                     </article>
+
+                    <!-- PUBLICACIÓN DE SIGUIENDO -->
 
                     <article class="post following-post">
 
@@ -332,6 +403,8 @@
             </section>
 
         </section>
+
+        <!-- COLUMNA DERECHA -->
 
         <aside class="rigth-column">
 
