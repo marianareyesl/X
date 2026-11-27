@@ -5,10 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X - Sesión activa</title>
+    <title>X - Inicio</title>
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/session.css">
+    <link rel="stylesheet" href="css/composer.css">
 </head>
 
 <body>
@@ -41,14 +42,13 @@
 
         <section class="center-column">
 
-            <main class="session-container">
+            <section class="session-container">
                 <section class="session-box">
 
                     <h2>Sesión activa</h2>
 
                     <div class="user-info">
                         <h3>Usuario conectado</h3>
-
                         <p>Nombre: Usuario X</p>
                         <p>Correo: usuario@ejemplo.com</p>
                         <p>Estado: Activo</p>
@@ -57,7 +57,22 @@
                     <a href="#" class="logout-button">Cerrar sesión</a>
 
                 </section>
-            </main>
+            </section>
+
+            <h2>Inicio</h2>
+
+            <form class="composer">
+                <textarea maxlength="280" placeholder="¿Qué está pasando?"></textarea>
+
+                <div class="composer-footer">
+                    <input type="file" accept="image/*">
+
+                    <div class="composer-controls">
+                        <span class="char-count">0 / 280</span>
+                        <button type="submit">Publicar</button>
+                    </div>
+                </div>
+            </form>
 
         </section>
 
@@ -69,4 +84,5 @@
 
 </body>
 </html>
+
 
