@@ -1,12 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X - Inicio</title>
+    <title>X - Sesión activa</title>
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/session.css">
 </head>
 
 <body>
@@ -38,7 +40,25 @@
         </aside>
 
         <section class="center-column">
-            <h2>Inicio</h2>
+
+            <main class="session-container">
+                <section class="session-box">
+
+                    <h2>Sesión activa</h2>
+
+                    <div class="user-info">
+                        <h3>Usuario conectado</h3>
+
+                        <p>Nombre: Usuario X</p>
+                        <p>Correo: usuario@ejemplo.com</p>
+                        <p>Estado: Activo</p>
+                    </div>
+
+                    <a href="#" class="logout-button">Cerrar sesión</a>
+
+                </section>
+            </main>
+
         </section>
 
         <aside class="rigth-column">
@@ -49,3 +69,4 @@
 
 </body>
 </html>
+
