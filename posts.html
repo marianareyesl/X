@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts - Twitter</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .perfil {
+            max-width: 600px;
+            margin: auto;
+            background-color: #111;
+            border: 1px solid #333;
+        }
+
+        .encabezado {
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .usuario {
+            color: #aaa;
+            font-size: 13px;
+        }
+
+        .pestanas {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px;
+            border-bottom: 1px solid #333;
+            color: #aaa;
+        }
+
+        .pestanas span {
+            padding: 10px;
+        }
+
+        .pestanas span:first-child {
+            color: white;
+            border-bottom: 3px solid white;
+        }
+
+        .publicacion {
+            padding: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .foto {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: white;
+            color: black;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+
+        .nombre {
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .texto {
+            margin-left: 55px;
+            line-height: 1.5;
+        }
+
+        .interacciones {
+            margin-left: 55px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .boton {
+            padding: 10px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="perfil">
+
+        <div class="encabezado">
+            ← Posts
+            <div class="usuario">12 publicaciones</div>
+        </div>
+
+        <div class="pestanas">
+            <span>Publicaciones</span>
+            <span>Respuestas</span>
+            <span>Multimedia</span>
+            <span>Me gusta</span>
+        </div>
+
+        <div class="publicacion">
+
+            <div class="foto">IM</div>
+            <span class="nombre">Ing Mendoza ✓</span>
+            <span class="usuario">@ing_dev · 2 min</span>
+
+            <div class="texto">
+                <p>
+                    Hola, soy ingeniero de software y me apasiona
+                    desarrollar proyectos, aprender nuevas tecnologías
+                    y crear soluciones digitales.
+                </p>
+            </div>
+
+            <div class="interacciones">
+                <span>♡ 12</span>
+                <span>↻ 5</span>
+                <span>💬 3</span>
+                <span>⇧</span>
+            </div>
+
+        </div>
+
+        <div class="publicacion">
+
+            <div class="foto">IM</div>
+            <span class="nombre">Ing Mendoza ✓</span>
+            <span class="usuario">@ing_dev · 1 h</span>
+
+            <div class="texto">
+                <p>
+                    Cada proyecto es una oportunidad para mejorar mis
+                    habilidades de programación, resolver problemas
+                    y aprender algo nuevo.
+                </p>
+            </div>
+
+            <div class="interacciones">
+                <span>♡ 20</span>
+                <span>↻ 8</span>
+                <span>💬 4</span>
+                <span>⇧</span>
+            </div>
+
+        </div>
+
+        <div class="publicacion">
+
+            <div class="foto">IM</div>
+            <span class="nombre">Ing Mendoza ✓</span>
+            <span class="usuario">@ing_dev · 3 h</span>
+
+            <div class="texto">
+                <p>
+                    Trabajando en nuevos proyectos de desarrollo web.
+                    La creatividad y la tecnología pueden crear
+                    grandes cosas. 💻
+                </p>
+            </div>
+
+            <div class="interacciones">
+                <span>♡ 35</span>
+                <span>↻ 10</span>
+                <span>💬 6</span>
+                <span>⇧</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
